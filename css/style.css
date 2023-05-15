@@ -31,7 +31,7 @@
     --text-color: #000000;
     --map-border: #1B3B27;
     --icon-color: #1B3B27;
-    --icon-change-theme: url("/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/moon.svg");
+    --icon-change-theme: url("./img/moon.svg");
     --opacity-about: 100%;
 }
 
@@ -43,7 +43,7 @@
     --text-color: #ffffff;
     --map-border: #ffffff;
     --icon-color: #ffffff;
-    --icon-change-theme: url("/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/sun.svg");
+    --icon-change-theme: url("./img/sun.svg");
     --opacity-about: 50%;
 }
 
@@ -150,7 +150,7 @@ h1 {
     flex-direction: column-reverse;
     justify-content: space-between;
     gap: 50px;
-    background-image: url("/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/Foto01_v3.jpg");
+    background-image: url("./img/Foto01_v3.jpg");
     background-position: 50% 33%; 
     background-size: 100%;
     width: 100%;
@@ -307,7 +307,7 @@ span {
     justify-content: center;
     height: 600px;
     width: 100%;
-    background-image: url(/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/nerd_back.png);
+    background-image: url(./img/nerd_back.png);
 }
 
 .aboutNerd {
