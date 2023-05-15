@@ -1,0 +1,753 @@
+/* Importando a tipografia  */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    resize: none;
+    transition: 0,5s;
+}
+
+/* Variáveis CSS */
+:root {
+    --font_josefin: 'Josefin Sans', sans-serif;
+    --font_unbounded: 'Unbounded', cursive;
+    --verde: #1B3B27;
+    --branco: #ffffff;
+    --black: #000000;
+    --light-green: #476251;
+    --lighter-green: #8caa97;
+}
+
+.lightTheme {
+    --background-color: #ffffff;
+    --button-color: #000000;
+    --button-hover-color: #292929;
+    --button-click-color: #b4b4b4;
+    --text-color: #000000;
+    --map-border: #1B3B27;
+    --icon-color: #1B3B27;
+    --icon-change-theme: url("/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/moon.svg");
+    --opacity-about: 100%;
+}
+
+.darkTheme {
+    --background-color: #000000;
+    --button-color: #ffffff;
+    --button-hover-color: #ffffff;
+    --button-click-color: #b4b4b4;
+    --text-color: #ffffff;
+    --map-border: #ffffff;
+    --icon-color: #ffffff;
+    --icon-change-theme: url("/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/sun.svg");
+    --opacity-about: 50%;
+}
+
+.alinhamento {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--verde);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 175px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    /* gap: 50px; */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 775px;
+    list-style: none;
+}
+
+.menu a {
+    text-transform: uppercase;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--font_josefin);
+    font-weight: 800;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+/* .menu #profile {
+    display: flex;
+    justify-content: space-between;
+    color: var(--branco);
+} */
+
+/* Change to dark and bright mode button */
+.changeTheme {
+    transition: 0.5s;
+    position: fixed;
+    display: flex;
+    margin-top: 73vh;
+    right: 10vmin;
+    background-color: var(--button-color);
+    background-image: var(--icon-change-theme);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    opacity: 50%;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    padding: 15px;
+    border-radius: 0.7rem;
+    border: none;
+}
+
+.changeTheme:hover {
+    transition: 0.5s;
+    background-color: var(--button-hover-color);
+    opacity: 100%;
+    border: none;
+}
+
+.changeTheme:active {
+    transition: 0s;
+    background-color: var(--button-click-color);
+    border: none;
+}
+
+/* ---- Quem somos? ---- */
+main {
+    background-color: var(--verde);
+}
+
+h1 {
+    position: absolute;
+    left: -999em;
+    width: 1em;
+    overflow: hidden;
+}
+
+.quem_somos {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 50px;
+    background-image: url("/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/Foto01_v3.jpg");
+    background-position: 50% 33%; 
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding: 100px 0;
+    z-index: 2;
+}
+
+.imageDescription {
+    z-index: -1;
+}
+
+.primeira_foto {
+    width: 700px;
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 70px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 375px;
+    height: 300;
+    margin-left: 90vmin;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    color: var(--black);
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.sobre_titulo {
+    font-family: var(--font_josefin);
+    font-size: 60px;
+    text-align: left;
+}
+
+.sobre_texto {
+    font-family: var(--font_josefin);
+    font-size: 25px;
+    text-align: justify;
+}
+
+.btn_esg {
+    background-color: var(--verde);
+    font-family: var(--font_josefin);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    font-size: 25px;
+    box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+.btn_esg a {
+    color: var(--branco);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn_esg:hover {
+    transition: 0.5s;
+    background-color: var(--light-green);
+}
+
+.btn_esg:active {
+    transition: 0.1s;
+    background-color: var(--lighter-green)
+}
+
+/* Data de Lançamento */
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 80px;
+    font-family: var(--font_josefin);
+    color: var(--branco);
+    background-color: var(--verde);
+    padding: 100px;
+    text-align: center;
+}
+
+span {
+    text-transform: uppercase;
+}
+
+/* ---- Imagens ---- */
+.imagens {
+    background-color: var(--verde);
+    padding-bottom: 100px;
+}
+
+.imgs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.imgs>* {
+    width: 475px;
+    /* border-radius: 50px; */
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- ESG ---- */
+.esg {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    background-color: var(--background-color);
+}
+
+.sobre_esg {
+    text-align: center;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin: 0 50px;
+    gap: 50px;
+    color: var(--text-color);
+}
+
+.sobre_esg_titulo {
+    font-family: var(--font_josefin);
+    font-size: 60px;
+}
+
+.sobre_esg_texto {
+    font-family: var(--font_josefin);
+    font-size: 30px;
+}
+
+.esg img {
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 70px;
+    width: 50%;
+}
+
+/* ---- G&TO NERD ---- */
+.nerd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+    background-image: url(/AULAS_HTML_CSS/LANCAMENTO_ESTRATEGICO_TM7/img/nerd_back.png);
+}
+
+.aboutNerd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    width: 700px;
+    padding: 30px;
+}
+
+.titleNerd {
+    font-family: var(--font_unbounded);
+    color: var(--branco);
+    font-size: 30px;
+}
+
+.gtoFortnite {
+    width: 700px;
+}
+
+.textNerd {
+    color: var(--branco);
+    font-family: var(--font_josefin);
+    text-align: justify;
+}
+
+.imageDescriptionNerd {
+    z-index:-1;
+}
+
+/* ---- Formulário ---- */
+.formulario {
+    background-color: var(--verde);
+    padding: 100px 0;
+}
+
+.formulario_titulo {
+    font-family: var(--font_josefin);
+    font-size: 60px;
+    color: var(--branco);
+    text-align: center;
+    margin: 35px;
+}
+
+form {
+    color: var(--branco);
+    font-family: var(--font_josefin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 25px;
+}
+
+input {
+    height: 35px;
+    padding: 20px;
+}
+
+textarea {
+    padding: 20px;
+}
+
+.borda {
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+}
+
+.btn_forms {
+    background: var(--branco);
+    border-radius: 30px;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    color: var(--verde);
+    font-family: var(--font_josefin);
+    margin: 0 auto;
+}
+
+/* ---- Contato ---- */
+
+.mapa {
+    width: 580px;
+}
+
+.contato {
+    padding: 100px 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.contato_titulo {
+    font-family: var(--font_josefin);
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.conteudo_contato {
+    display: flex;
+    justify-content: space-around;
+}
+
+.borda_mapa {
+    border: 5px solid var(--map-border);
+    width: 700px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato_info {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font_josefin);
+    font-size: 30px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info i {
+    margin-right: 20px;
+    color: var(--icon-color);
+}
+
+/* ---- Footer ---- */
+
+footer {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-family: var(--font_josefin);
+    font-size: 19px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- Responsividade ---- */
+/* Largura das telas
+
+Pequenas Telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px */
+
+@media screen and (max-width: 1920px) {
+    /* ESG */
+    .esg {
+        width: 100%;
+        padding: 75px 100px;
+    }
+
+    /* Contato */
+
+    .contato {
+        width: 100%;
+    }
+
+    .contato_titulo {
+        margin-bottom: 50px;
+    }
+
+    .conteudo_contato {
+        justify-content: center;
+        gap: 190px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    .alinhamento {
+        width: 100%;
+    }
+
+    /* Cabeçalho */
+    nav {
+        padding: 0 50px;
+    }
+
+    /* Sobre */
+    .sobre {
+        max-width: 500px;
+    }
+
+    .quem_somos {
+        padding: 100px 50px;
+    }
+
+    /* Lançamento */
+    .imgs {
+        flex-wrap: wrap;
+    }
+
+    /* ESG */
+    .sobre_esg_texto {
+        font-size: 26px;
+    }
+
+    .esg img {
+        width: 50%;
+    }
+    
+    .esg {
+        padding: 100px 50px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    /* Sobre */
+    .sobre {
+        margin-left: 70vmin;
+    }
+
+    .primeira_foto {
+        width: 550px;
+    }
+
+    /* Esg imagem */
+    .esg img {
+        width: 45%;
+    }
+    /* Esg texto */
+    .sobre_esg {
+        width: 480px;
+    }
+    .sobre_esg_texto {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    /* Cabeçalho */
+
+    .menu {
+        width: 600px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    /* Sobre */
+    .quem_somos {
+        background-size: 130%;
+        flex-direction: column;
+    }
+
+    .sobre {
+        margin-left: 50vmin;
+        margin-top: 30px;
+    }
+
+    .sobre_titulo {
+        color: var(--branco);
+    }
+
+    .sobre_texto {
+        color: var(--branco);
+    }
+
+    /* Lançamento */
+    .imgs {
+       gap: 50px;
+    }
+
+    .data {
+        font-size: 85px;
+    }
+
+    /* ESG */
+    .esg {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .sobre_esg {
+        width: 580px;
+    }
+
+    /* Contato */
+    .conteudo_contato {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    #burguer {
+        display: none;
+    }
+} 
+
+
+@media screen and (max-width: 768px) {
+
+    /* Sobre */
+    .sobre_titulo {
+        color: var(--branco);
+    }
+
+    .sobre_texto {
+        color: var(--branco);
+    }
+
+    /* Cabeçalho */
+    #burguer {
+        display: block;
+        color: var(--branco);
+        font-size: 55px;
+    }
+
+    #itens {
+        position: absolute;
+        /* V = Viewport H = Height (vh) */
+        height: 92vh;
+        /* V = Viewport w = Width (vw) */
+        width: 50vw;
+        top: 8vh;
+        right: 0;
+        background-color: var(--verde);
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .menu li {
+        padding: 50px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .data {
+        font-size: 70px;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    /* Sobre */
+    /* nav  {
+        justify-content: space-between;
+        gap: 0px;
+    } */
+
+    /* Sobre */
+
+    .quem_somos {
+        background-position: 50% 35%;
+        background-size: 250%;
+    }
+
+    .sobre {
+        align-content: center;
+        width: 50%;
+        height: 50%;
+        padding: 10px;
+    }
+
+    .sobre_titulo {
+        color: var(--branco);
+    }
+
+    .sobre_texto {
+        color: var(--branco);
+    }
+
+    .primeira_foto {
+        width: 450px;
+    }
+
+    /* Lançamento */
+    .data {
+        font-size: 45px;
+    }
+
+    /* ESG */
+    .esg img {
+        width: 70%;
+    }
+
+    .sobre_esg_texto {
+        padding: 0 40px;
+    }
+
+    /* NERD */
+
+    .gtoFortnite {
+        width: 70%;
+    }
+
+    .textNerd {
+        font-size: 16px;
+    }
+
+    /* Contato */
+    .mapa {
+        width: 400px;
+    }
+
+    .borda_mapa {
+        width: 480px;
+    }
+
+    .conteudo_contato {
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
