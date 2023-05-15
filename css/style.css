@@ -751,3 +751,36 @@ Grandes telas: acima de 1200px */
     }
     
 }
+
+@media screen and (max-width: 420px) {
+
+    /* Sobre */
+    .sobre_titulo {
+        margin-right: 10px;
+    }
+
+    /* Lançamento */
+    .imgs>* {
+        width: 70%;
+    }
+
+    /* ESG */
+    .sobre_esg {
+        width: 400px;
+    }
+
+    .sobre_esg_texto {
+        width: 90%;
+    }
+
+    /* Contato */
+    .borda_mapa {
+        width: 90%;
+    }
+
+    /* Dark/Light mode button  */
+    .changeTheme {
+        margin-top: 200vmin;
+        margin-right: 1vmin;
+    }
+}
